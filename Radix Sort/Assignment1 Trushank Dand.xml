@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE history [
+<!ELEMENT developer (#PCDATA)*>
+<!ELEMENT timeframe (year,language+,developer*)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT language (name,application,currently?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT application (#PCDATA)>
+<!ELEMENT currently (#PCDATA)> 
+]>
+<history>
+	<developer>Lady Augusta Ada Byron, Countess of Lovelace</developer>
+	<timeframe>
+		<year>1960</year>
+		<language>
+			<name>Algol 60</name>
+			<application>IFIP, block structure, recursion,
+				BNF syntax
+			</application>
+			<currently>dead</currently>
+		</language>
+		<language>
+			<name>COBOL</name>
+			<application>business data processing</application>
+			<currently>legacy</currently>
+		</language>
+		<language>
+			<name>COMIT</name>
+			<application>MIT, string processing</application>
+			<currently>Snobol</currently>
+		</language>
+		<language>
+			<name>Fortran</name>
+			<application>IBM, workhorse for numerical problems</application>
+			<currently>updated</currently>
+		</language>
+		<language>
+			<name>Lisp</name>
+			<application>McCarthy, workhorse for artiﬁcial
+				intelligence
+			</application>
+			<currently>updated</currently>
+		</language>
+		<developer>Grace Hopper</developer>
+		<developer>John Backus</developer>
+		<developer>Peter Naur</developer>
+	</timeframe>
+	<timeframe>
+		<year>1965</year>
+		<language>
+			<name>APL</name>
+			<application>Iverson, numerical mathematics</application>
+			<currently>J</currently>
+		</language>
+		<language>
+			<name>Basic</name>
+			<application>Dartmouth, interactive programming</application>
+			<currently>updated</currently>
+		</language>
+		<language>
+			<name>PL/I</name>
+			<application>IBM, attempt at a universal language</application>
+			<currently>dead</currently>
+		</language>
+		<language>
+			<name>Simula</name>
+			<application>Dahl et al., simulation, class concept</application>
+			<currently>SmallTalk</currently>
+		</language>
+		<language>
+			<name>Snobol</name>
+			<application>Griswold, string processing</application>
+			<currently>Icon</currently>
+		</language>
+		<developer>Ralph Griswold</developer>
+	</timeframe>
+	<timeframe>
+		<year>1970</year>
+		<language>
+			<name>Algol 68</name>
+			<application>very formally deﬁned, updated
+				successor to Algol 60
+			</application>
+			<currently>stillborn</currently>
+		</language>
+
+		<language>
+			<name>C</name>
+			<application>Ritchie et al., workhorse for systems
+				programming
+			</application>
+
+		</language>
+		<language>
+			<name>Pascal</name>
+			<application>Wirth’s ﬁrst for academia</application>
+			<currently>Delphi</currently>
+		</language>
+		<developer>Adriaan van Wijngaarden</developer>
+		<developer>Dennis Ritchie</developer>
+	</timeframe>
+	<timeframe>
+		<year>1975</year>
+		<language>
+			<name>awk</name>
+			<application>Aho et al., scripting, report generation</application>
+			<currently>Perl</currently>
+		</language>
+		<language>
+			<name>bc</name>
+			<application>Unix, high precision interactive
+				calculator
+			</application>
+
+		</language>
+		<language>
+			<name>m4</name>
+			<application>Unix, macro processor</application>
+
+		</language>
+		<language>
+			<name>Prolog</name>
+			<application>Clocksin et al.,declarative programming</application>
+			<currently>dying</currently>
+		</language>
+		<developer>Brian Kernighan</developer>
+	</timeframe>
+	<timeframe>
+		<year>1980</year>
+		<language>
+			<name>Icon</name>
+			<application>Griswold’s successor to Snobol</application>
+			<currently>exotic</currently>
+		</language>
+		<language>
+			<name>Modula</name>
+			<application>Wirth’s ﬁrst for modular
+				programming in academia
+			</application>
+			<currently>exotic</currently>
+		</language>
+		<language>
+			<name>Objective C</name>
+			<application>Cox, NeXT, C with object
+				orientation
+			</application>
+			<currently>MacOS X</currently>
+		</language>
+		<language>
+			<name>SGML</name>
+			<application>Goldfarb et al., document markup</application>
+			<currently>XML</currently>
+		</language>
+		<language>
+			<name>sh</name>
+			<application>Bourne et al., Unix command
+				languages
+			</application>
+
+		</language>
+		<language>
+			<name>SmallTalk 80</name>
+			<application>PARC, proverbial object
+				orientation
+			</application>
+
+		</language>
+		<developer>Brad Cox</developer>
+		<developer>Adele Goldberg</developer>
+	</timeframe>
+	<timeframe>
+		<year>1985</year>
+		<language>
+			<name>Ada</name>
+			<application>DoD, designed through requirements</application>
+			<currently>Updated</currently>
+		</language>
+		<language>
+			<name>C++</name>
+			<application>Stroustrup, C with object orientation</application>
+			<currently>dying</currently>
+		</language>
+
+		<developer>Jean Ichbiah</developer>
+		<developer>Bjarne Stroustrup</developer>
+	</timeframe>
+	<timeframe>
+		<year>1990</year>
+		<language>
+			<name>Oberon</name>
+			<application>Wirth’s best C ever</application>
+			<currently>exotic</currently>
+
+		</language>
+
+		<developer>Niklaus Wirth</developer>
+	</timeframe>
+	<timeframe>
+		<year>1995</year>
+		<language>
+			<name>Java</name>
+			<application>Gosling et al., selection from C++ and
+				Objective C
+			</application>
+
+		</language>
+		<developer>James Gosling</developer>
+	</timeframe>
+	<timeframe>
+		<year>2000</year>
+		<language>
+			<name>C#</name>
+			<application>Microsoft’s own brand of Java,
+				common runtime
+			</application>
+
+		</language>
+		<language>
+			<name>Haskell</name>
+			<application>Thompson, functional programming</application>
+
+		</language>
+		<language>
+			<name>XML</name>
+			<application>W3C, structured data representation</application>
+
+		</language>
+		<language>
+			<name>XQuery</name>
+			<application>W3C, alternative to XSLT</application>
+			<currently>SQL</currently>
+		</language>
+		<language>
+			<name>XSLT</name>
+			<application>W3C, functional language for XML
+				manipulation
+			</application>
+
+		</language>
+		<developer>Anders Hejlsberg</developer>
+		<developer>Tim Berners-Lee</developer>
+	</timeframe>
+</history>

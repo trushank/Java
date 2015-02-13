@@ -1,0 +1,27 @@
+Self Implementation
+Add Test: 10
+Contains Test: 5
+Size Test: 89
+Is Empty Test: 2
+Remove Test: 7
+
+Java
+Add Test: 24
+Contains Test: 12
+Size Test: 2
+Is Empty Test: 1
+Remove Test: 16
+
+Self Implementation
+Add Test: 9
+Contains Test: 5
+Size Test: 76
+Is Empty Test: 2
+Remove Test: 7
+
+Java
+Add Test: 12
+Contains Test: 8
+Size Test: 2
+Is Empty Test: 1
+Remove Test: 9

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/pets" xmlns:tns="http://www.example.org/pets" elementFormDefault="qualified">
+
+
+    <complexType name="pets">
+    	<sequence>
+    		<element name="dogs" type="tns:dogs"></element>
+    		<element name="cats" type="tns:cats"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="dogs">
+    	<sequence>
+    		<element name="dog" type="tns:dog" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="cats">
+    	<sequence>
+    		<element name="cat" type="tns:cat" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="dog">
+    	<sequence>
+    		<element name="color" type="string"></element>
+    	</sequence>
+    	<attribute name="breed" type="string"></attribute>
+    </complexType>
+
+    <complexType name="cat">
+    	<sequence>
+    		<element name="color" type="string"></element>
+    	</sequence>
+    	<attribute name="breed" type="string"></attribute>
+    </complexType>
+
+    <element name="pets" type="tns:pets"></element>
+</schema>

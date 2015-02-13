@@ -1,0 +1,186 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="companyDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="departments">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="department" maxOccurs="unbounded" minOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="dname"/>
+                    <xs:element name="locations">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="location" maxOccurs="unbounded" minOccurs="1"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="manager">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="startDate"/>
+                        </xs:sequence>
+                        <xs:attribute name="mssn" use="required">
+                        	<xs:simpleType>
+                        		<xs:restriction base="xs:int">
+                        			<xs:totalDigits value="9"/>
+                        		</xs:restriction>
+                        	</xs:simpleType>
+                        </xs:attribute>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="employees">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="essns" use="required"/>
+                            	
+                           
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="projectsControlled">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="pnos" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="dno" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="employees">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employee" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="fname"/>
+                    <xs:element type="xs:string" name="minit"/>
+                    <xs:element type="xs:string" name="lname"/>
+                    <xs:element type="xs:string" name="dob"/>
+                    <xs:element type="xs:string" name="address"/>
+                    <xs:element name="sex">
+                    	<xs:simpleType>
+                    		<xs:restriction base="xs:string">
+                    			<xs:enumeration value="M"></xs:enumeration>
+                    			<xs:enumeration value="F"></xs:enumeration>
+                    		</xs:restriction>
+                    	</xs:simpleType>
+                    </xs:element>
+                    <xs:element name="salary">
+                    	<xs:simpleType>
+                    		<xs:restriction base="xs:int">
+                    			<xs:minInclusive value="1000"></xs:minInclusive>
+                    			<xs:maxInclusive value="200000"></xs:maxInclusive>
+                    		</xs:restriction>
+                    	</xs:simpleType>
+                    </xs:element>
+                    <xs:element name="dependents" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="dependent" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="dependentName"/>
+                                <xs:element name="sex">
+                                <xs:simpleType>
+                    		<xs:restriction base="xs:string">
+                    			<xs:enumeration value="M"></xs:enumeration>
+                    			<xs:enumeration value="F"></xs:enumeration>
+                    		</xs:restriction>
+                    	</xs:simpleType>
+                    </xs:element>
+                                <xs:element type="xs:string" name="dob"/>
+                                <xs:element type="xs:string" name="relationship"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="supervisees" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="essns" use="required"/>
+                           
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="projects" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="worksOn" maxOccurs="unbounded" minOccurs="1">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:int" name="pno" use="required"/>
+                                  <xs:attribute type="xs:float" name="hours" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="ssn" use="required">
+                  	<xs:simpleType>
+                  		<xs:restriction base="xs:int">
+                  			<xs:totalDigits value="9"/>
+                  		</xs:restriction>
+                  	</xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute type="xs:int" name="worksFor" use="optional"/>
+                  <xs:attribute type="xs:int" name="supervisor" use="optional"/>
+                  <xs:attribute type="xs:int" name="manages" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="projects">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="project" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="pname"/>
+                    <xs:element type="xs:string" name="plocation"/>
+                    <xs:element name="workers">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="worker" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:float">
+                                  <xs:attribute type="xs:int" name="essn" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="pnumber" use="optional"/>
+                  <xs:attribute type="xs:byte" name="controllingDepartment" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

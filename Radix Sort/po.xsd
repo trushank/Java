@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/po" xmlns:tns="http://www.example.org/po" elementFormDefault="qualified">
+
+
+
+    <complexType name="purchaseOrder">
+    	<sequence>
+    		<element name="shipTo" type="tns:shipTo"></element>
+    		<element name="billTo" type="tns:billTo"></element>
+            <element name="comment" type="string"></element>
+            <element name="items" type="tns:items"></element>
+    	</sequence>
+    	<attribute name="orderDate" type="string"></attribute>
+    </complexType>
+
+    <complexType name="shipTo">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="street" type="string"></element>
+    		<element name="city" type="string"></element>
+    		<element name="state" type="string"></element>
+    		<element name="zip" type="string"></element>
+    	</sequence>
+    	<attribute name="country" type="string"></attribute>
+    </complexType>
+
+    <complexType name="billTo">
+    	<sequence>
+    		<element name="name" type="string"></element>
+    		<element name="street" type="string"></element>
+    		<element name="city" type="string"></element>
+    		<element name="state" type="string"></element>
+    		<element name="zip" type="string"></element>
+    	</sequence>
+    	<attribute name="country" type="string"></attribute>
+    </complexType>
+
+    <simpleType name="comment">
+    	<restriction base="string"></restriction>
+    </simpleType>
+
+
+    <complexType name="item">
+    	<sequence>
+    		<element name="productName" type="string"></element>
+    		<element name="quantity" type="string"></element>
+    		<element name="USPrice" type="string"></element>
+            <element name="shipDate" type="string" maxOccurs="1" minOccurs="0"></element>
+            <element name="comment" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    	<attribute name="partNum" type="string"></attribute>
+    </complexType>
+
+
+
+    <complexType name="items">
+    	<sequence>
+    		<element name="item" type="tns:item" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+
+    <element name="purchaseOrder" type="tns:purchaseOrder"></element>
+</schema>

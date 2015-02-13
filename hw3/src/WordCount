@@ -1,0 +1,53 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+class WordCount
+{
+     public static void main(String args[])
+    {
+	
+	int counter=0;
+	BufferedReader br=new BufferedReader(InputStreamReader(new File(args[0])));
+	System.out.println(br.read());
+	Scanner src= new Scanner(new File(args[0]));
+	src.next
+	String comma=",";
+	String fullstop=".";
+    String slash="/";
+	String question_mark="?";
+	String exclimation_mark="!";
+		
+	for (String s: args) /* this loop counts  the number of string inputed into the command line*/
+	{
+	    counter++;
+	    /*if(s.equals(comma)||s.equals(fullstop)||s.equals(slash)||s.equals(question_mark)||s.equals(exclimation_mark))
+		counter--;*/
+	    for(int i=0;i<s.length();i++)
+	    {
+		if(((s.charAt(i)=='.')||(s.charAt(i)==',')||(s.charAt(i)=='?')||(s.charAt(i)=='!')||(s.charAt(i)=='/'))&&((i+1)<s.length()))
+		    counter++;
+	    }
+		
+		if(s.length()==1)
+		{
+				if(!Character.isDigit(s.charAt(0))||!Character.isLetter(s.charAt(0)))
+				{
+					//System.out.println("aa");
+					
+						counter--;
+					
+				}
+
+
+		}
+	}
+
+	
+	System.out.println(counter);
+
+    }
+}

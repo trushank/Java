@@ -1,0 +1,124 @@
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+
+ <xsd:element name='playerData'>
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element ref='player' maxOccurs='unbounded'/>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name='player'>
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element ref='registry'/>
+    <xsd:element ref='connection'/>
+    <xsd:element ref='gameStats'/>
+   </xsd:sequence>
+   <xsd:attribute name='name' type='xsd:string' use='required'/>
+   <xsd:attribute name='id' type='xsd:ID' use='required'/>
+  </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name='registry'>
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element ref='familyName'/>
+    <xsd:element ref='givenName'/>
+    <xsd:element ref='email'/>
+    <xsd:element ref='date'/>
+    <xsd:element ref='version'/>
+    <xsd:element ref='lastUpgrade'/>
+   </xsd:sequence>
+   <xsd:attribute name='key' type='xsd:ID' use='required'/>
+  </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name='familyName' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='givenName' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='email' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='date' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='version' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='lastUpgrade' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='connection'>
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element ref='bandwidth'/>
+    <xsd:element ref='avgTime'/>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name='bandwidth' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='avgTime' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='gameStats'>
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element ref='games'/>
+    <xsd:element ref='wins'/>
+    <xsd:element ref='loses'/>
+    <xsd:element ref='kills'/>
+    <xsd:element ref='deaths'/>
+    <xsd:element ref='suicides'/>
+    <xsd:element ref='friendKills'/>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name='games'>
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element ref='allOut'/>
+    <xsd:element ref='team'/>
+    <xsd:element ref='captureFlag'/>
+    <xsd:element ref='hunter'/>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name='allOut' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='team' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='captureFlag' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='hunter' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='wins' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='loses' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='kills' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='deaths' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='suicides' type='xsd:string'>
+ </xsd:element>
+
+ <xsd:element name='friendKills' type='xsd:string'>
+ </xsd:element>
+</xsd:schema>

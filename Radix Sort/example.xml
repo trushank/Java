@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playerData  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNameSpaceSchemaLocation="file:///D:/Dropbox/Workspace/Radix%20Sort/example.xsd">
+    <player name="Trushank" id="tgd2900">
+        <registry key="i1234">
+            <familyName>Dand</familyName>
+            <givenName>Trushank</givenName>
+            <email>tgd2900@rit.edu</email>
+            <date>12/12/12</date>
+            <version>1</version>
+            <lastUpgrade>12/12/12</lastUpgrade>
+        </registry>
+        <connection>
+            <bandwidth>100</bandwidth>
+            <avgTime>20</avgTime>
+        </connection>
+        <gameStats>
+            <games>
+                <allOut>10</allOut>
+                <team>2</team>
+                <captureFlag>2</captureFlag>
+                <hunter>3</hunter>
+            </games>
+            <wins>2</wins>
+            <loses>2</loses>
+            <kills>2</kills>
+            <deaths>3</deaths>
+            <suicides>1</suicides>
+            <friendKills>1</friendKills>
+        </gameStats> </player>
+</playerData>
